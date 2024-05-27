@@ -5,7 +5,7 @@ session_start();
 // Check if the user is logged in
 if (!isset($_SESSION["username"])) {
     // If not logged in, redirect to the login page
-    header("Location: login.php");
+    header("Location: login/login.php");
     exit;
 }
 
@@ -56,7 +56,7 @@ $username = $_SESSION["username"];
     <p>This is your personalized dashboard.</p>
     <p>Feel free to explore and manage your account.</p>
     <div class="logout">
-      <p><a href="logout.php">Logout</a></p>
+      <p><a href="login/logout.php">Logout</a></p>
     </div>
   </div>
 </body>
