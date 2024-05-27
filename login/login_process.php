@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } else {
         // If the username or password is incorrect, redirect back to the login page with an error message
-        header("Location: login.php?error=1");
+        header("Location: login/login.php?error=1");
         exit;
     }
 } else {
     // If the form is not submitted, redirect back to the login page
-    header("Location: login.php");
+    header("Location: login/login.php");
     exit;
 }
 ?>
