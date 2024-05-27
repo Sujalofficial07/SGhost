@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 } else {
     // If the form is not submitted, redirect back to the create server page
-    header("Location: create-server.php");
+    header("Location: create-server/create-server.php");
     exit;
 }
 ?>
