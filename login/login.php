@@ -53,13 +53,13 @@
 <body>
   <div class="container">
     <h1>Login</h1>
-    <form action="login_process.php" method="post">
+    <form action="login/login_process.php" method="post">
       <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>
       <input type="submit" value="Login">
     </form>
-    <div class="register-link">
-      <p>Don't have an account? <a href="register.php">Register here</a></p>
+    <div class="login/register-link">
+      <p>Don't have an account? <a href="login/register.php">Register here</a></p>
     </div>
   </div>
 </body>
