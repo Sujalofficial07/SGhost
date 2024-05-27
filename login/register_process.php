@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate the username and password (you might want to add more validation here)
     if (strlen($username) < 6 || strlen($password) < 6) {
         // If username or password is too short, redirect back to the registration page with an error message
-        header("Location: register.php?error=1");
+        header("Location: login/register.php?error=1");
         exit;
     }
 
@@ -38,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the statement
     if ($stmt->execute()) {
         // Registration successful, redirect the user to the login page
-        header("Location: login.php?registered=1");
+        header("Location: login/login.php?registered=1");
         exit;
     } else {
         // If the registration fails, redirect back to the registration page with an error message
-        header("Location: register.php?error=2");
+        header("Location: login/register.php?error=2");
         exit;
     }
 
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 } else {
     // If the form is not submitted, redirect back to the registration page
-    header("Location: register.php");
+    header("Location: login/register.php");
     exit;
 }
 ?>
